@@ -7,6 +7,7 @@
 //
 #import <ShinobiCharts/ShinobiChart.h>
 #import "CandidateProfileViewController.h"
+#import "MultiGraphViewController.h"
 #import "parseCSV.h"
 #import "LineChartDataSource.h"
 
@@ -117,6 +118,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)fullScreenGraph:(id)sender
+{
+  MultiGraphViewController *multiGraph = [[MultiGraphViewController alloc] initWithNibName:@"MultiGraphViewController" bundle:nil];
+  [self.navigationController pushViewController:multiGraph animated:NO];
 }
 
 @end
