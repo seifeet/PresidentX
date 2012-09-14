@@ -12,8 +12,6 @@
 
 @interface ViewController ()
 
-- (IBAction)obamaProfilePressed:(id)sender;
-- (IBAction)romneyProfilePressed:(id)sender;
 @end
 
 @implementation ViewController
@@ -24,7 +22,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
   self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
   self.navigationController.navigationBar.translucent = YES;
-  
+  UIImageView *headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header.png"]];
+//  [self.navigationController.navigationItem.titleView addSubview:headerView];
+//  self.navigationController.navigationBar ;
 }
 
 - (void)viewDidUnload
@@ -38,20 +38,22 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (IBAction)obamaProfilePressed:(id)sender
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
-  candidateVC.candidate = @"obama";
-  [self.navigationController pushViewController:candidateVC animated:YES];
+  UITouch *touch = [touches anyObject];
+  CGPoint point = [touch locationInView:self.view];
+  if (point.y < 252.0)
+  {
+    CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
+    candidateVC.candidate = @"romney";
+    [self.navigationController pushViewController:candidateVC animated:YES];
+  }
+  else
+  {
+    CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
+    candidateVC.candidate = @"obama";
+    [self.navigationController pushViewController:candidateVC animated:YES];
+  }
 }
-
-- (IBAction)romneyProfilePressed:(id)sender
-{
-  CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
-  candidateVC.candidate = @"romney";
-  [self.navigationController pushViewController:candidateVC animated:YES];
-}
-
-
 
 @end

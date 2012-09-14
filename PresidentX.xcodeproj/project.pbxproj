@@ -22,6 +22,9 @@
 		47A47F5A1602E2B40079D52C /* MultiGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A47F581602E2B30079D52C /* MultiGraphViewController.m */; };
 		47A47F5B1602E2B40079D52C /* MultiGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F591602E2B30079D52C /* MultiGraphViewController.xib */; };
 		47A47F5E1602E5350079D52C /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F5D1602E5350079D52C /* icon_close.png */; };
+		47A47F611602ED180079D52C /* obama.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F5F1602ED180079D52C /* obama.png */; };
+		47A47F621602ED180079D52C /* romney.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F601602ED180079D52C /* romney.png */; };
+		47A47F641602EDE40079D52C /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F631602EDE40079D52C /* header.png */; };
 		59FC0ED31602D25C004D20E1 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */; };
 		59FC0EF81602D4FB004D20E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */; };
 		59FC0EF91602D4FB004D20E1 /* CandidateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */; };
@@ -56,6 +59,9 @@
 		47A47F581602E2B30079D52C /* MultiGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiGraphViewController.m; path = PresidentX/MultiGraphViewController.m; sourceTree = SOURCE_ROOT; };
 		47A47F591602E2B30079D52C /* MultiGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MultiGraphViewController.xib; path = PresidentX/MultiGraphViewController.xib; sourceTree = SOURCE_ROOT; };
 		47A47F5D1602E5350079D52C /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		47A47F5F1602ED180079D52C /* obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama.png; sourceTree = "<group>"; };
+		47A47F601602ED180079D52C /* romney.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = romney.png; sourceTree = "<group>"; };
+		47A47F631602EDE40079D52C /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		59FC0EDD1602D4FB004D20E1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PresidentX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PresidentX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -198,6 +204,9 @@
 		47A47F5C1602E5350079D52C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				47A47F631602EDE40079D52C /* header.png */,
+				47A47F5F1602ED180079D52C /* obama.png */,
+				47A47F601602ED180079D52C /* romney.png */,
 				47A47F5D1602E5350079D52C /* icon_close.png */,
 			);
 			name = Images;
@@ -268,6 +277,9 @@
 				47A47F561602E09C0079D52C /* obama_intrade_edited.csv in Resources */,
 				47A47F5B1602E2B40079D52C /* MultiGraphViewController.xib in Resources */,
 				47A47F5E1602E5350079D52C /* icon_close.png in Resources */,
+				47A47F611602ED180079D52C /* obama.png in Resources */,
+				47A47F621602ED180079D52C /* romney.png in Resources */,
+				47A47F641602EDE40079D52C /* header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
