@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CandidateProfileViewController : UIViewController <SChartDelegate>
+@interface CandidateProfileViewController : UIViewController
+<SChartDelegate>
 
 @property (strong, nonatomic) NSString *candidate;
 
