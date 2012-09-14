@@ -16,50 +16,6 @@
 
 @implementation LineChartDataSource
 
-- (NSDate *)dateFromString:(NSString *)str {
-    
-    static BOOL monthLookupTableInitialised = NO;
-    static NSMutableArray *monthIdx;
-    static NSArray *monthNames;
-    static NSDictionary *months;
-    
-    if (!monthLookupTableInitialised) {
-        monthIdx = [[NSMutableArray alloc] init ];
-        for (int i = 1; i <= 12; ++i) {
-            [monthIdx addObject:[NSNumber numberWithInt:i]];
-        }
-        
-        monthNames = [[NSArray alloc] initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
-        months = [[NSDictionary alloc] initWithObjects:monthIdx forKeys:monthNames];
-        monthLookupTableInitialised = YES;
-    }
-    
-    NSRange dayRange = NSMakeRange(0,2);
-    NSString *dayString = [str substringWithRange:dayRange];
-    NSUInteger day = [dayString intValue];
-    
-    NSRange monthRange = NSMakeRange(3, 3);
-    NSString *monthString = [str substringWithRange:monthRange];
-    NSUInteger month = [[months objectForKey:monthString] unsignedIntValue];
-    
-    NSRange yearRange = NSMakeRange(7, 4);
-    NSString *yearString = [str substringWithRange:yearRange];
-    NSUInteger year = [yearString intValue];
-    
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    [components setDay:day]; 
-    [components setMonth:month];
-    [components setYear:year];
-    
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDate *date = [gregorian dateFromComponents:components];
-    
-    [components release];
-    [gregorian release];
-    
-    return date;
-}
-
 - (void)readCandidateData
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"candidates" ofType:@"csv"];
