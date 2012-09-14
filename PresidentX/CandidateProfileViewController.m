@@ -12,6 +12,7 @@
 #import "LineChartDataSource.h"
 
 @interface CandidateProfileViewController ()
+
 @property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
 @property (nonatomic, strong) LineChartDataSource *dataSource;
 
@@ -32,15 +33,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
-
-  //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
-  CGRect chartFrame = CGRectMake(0.0, 200.0, 320.0, 260.0);
-  
-  [self createChartWithFrame:chartFrame];
+    self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
+    
+    //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
+    CGRect chartFrame = CGRectMake(0.0, 200.0, 320.0, 260.0);
+    
+    [self createChartWithFrame:chartFrame];
 }
 
--(void)createChartWithFrame:(CGRect)frame {
+-(void)createChartWithFrame:(CGRect)frame
+{
   
   ShinobiChart *chart = [[ShinobiChart alloc] initWithFrame:frame withTheme: [[SChartMidnightTheme alloc] init] withPrimaryXAxisType:SChartAxisTypeDateTime withPrimaryYAxisType:SChartAxisTypeNumber];
   //As the chart is a UIView, set its resizing mask to allow it to automatically resize when screen orientation changes.
