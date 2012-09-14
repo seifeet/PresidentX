@@ -9,12 +9,15 @@
 #import <ShinobiCharts/ShinobiChart.h>
 #import "MultiGraphViewController.h"
 #import "TwitterTopicsDataSource.h"
+#import "DayViewController.h"
+#import "LineChartDataSource.h"
 #import "parseCSV.h"
 
 @interface MultiGraphViewController ()
 
 @property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
 @property (nonatomic, strong) TwitterTopicsDataSource *dataSource;
+@property (nonatomic, strong) LineChartDataSource *ldataSource;
 
 @end
 
@@ -39,7 +42,6 @@
   // Do any additional setup after loading the view from its nib.
   self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
   
-  //  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
   CGRect chartFrame = CGRectMake(0.0, 2.0, self.view.bounds.size.width, self.view.bounds.size.height);
   
   [self createChartWithFrame:chartFrame];
@@ -56,6 +58,7 @@
   [UIViewController attemptRotationToDeviceOrientation];
   [super viewWillAppear:animated];
 }
+
 - (void)createChartWithFrame:(CGRect)frame
 {
     
@@ -128,6 +131,13 @@
 - (void)closeButtonPressed
 {
   [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+//  DayViewController *dayVC = [[DayViewController alloc] init];
+//  dayVC.candidate = @"obama";
+//  [self.navigationController pushViewController:dayVC animated:NO];
 }
 
 @end
