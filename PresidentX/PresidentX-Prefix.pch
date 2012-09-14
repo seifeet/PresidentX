@@ -1,0 +1,16 @@
+//
+// Prefix header for all source files of the 'AOLHatch' target in the 'AOLHatch' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif
+
+#define LICENSE_KEY @"YbT+1XpCB8f55B1MjAxMjEwMTNpbmZvQHNoaW5vYmljb250cm9scy5jb20=dEHguBmm/6U0sm5cDMVLzEo1nDBee/oeVnOUde/FbpIH+sHpX82n+LcYL7SVnC+ZB8rsw+eHVEk4HOkobtr+N2Y30oEa0IAN8nJMuvtwG0LOpRpO/RoufbEqmCw39/45EqKYUY2Ima07YG/jJc2nGgyfhEiU=BQxSUisl3BaWf/7myRmmlIjRnMU2cA7q+/03ZX9wdj30RzapYANf51ee3Pi8m2rVW6aD7t6Hi4Qy5vv9xpaQYXF5T7XzsafhzS3hbBokp36BoJZg8IrceBj742nQajYyV7trx5GIw9jy/V6r0bvctKYwTim7Kzq+YPWGMtqtQoU=PFJTQUtleVZhbHVlPjxNb2R1bHVzPnh6YlRrc2dYWWJvQUh5VGR6dkNzQXUrUVAxQnM5b2VrZUxxZVdacnRFbUx3OHZlWStBK3pteXg4NGpJbFkzT2hGdlNYbHZDSjlKVGZQTTF4S2ZweWZBVXBGeXgxRnVBMThOcDNETUxXR1JJbTJ6WXA3a1YyMEdYZGU3RnJyTHZjdGhIbW1BZ21PTTdwMFBsNWlSKzNVMDg5M1N4b2hCZlJ5RHdEeE9vdDNlMD08L01vZHVsdXM+PEV4cG9uZW50PkFRQUI8L0V4cG9uZW50PjwvUlNBS2V5VmFsdWU+"

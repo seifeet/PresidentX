@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47A47ED5160294200079D52C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47ED4160294200079D52C /* UIKit.framework */; };
+		47A47ED7160294200079D52C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47ED6160294200079D52C /* Foundation.framework */; };
+		47A47ED9160294200079D52C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47ED8160294200079D52C /* CoreGraphics.framework */; };
+		47A47EF2160296230079D52C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47EF1160296230079D52C /* QuartzCore.framework */; };
+		47A47EF4160296280079D52C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47EF3160296280079D52C /* OpenGLES.framework */; };
+		47A47F091602A4C10079D52C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47F081602A4C10079D52C /* Security.framework */; };
+		59FC0ED31602D25C004D20E1 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */; };
+		59FC0EF81602D4FB004D20E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */; };
+		59FC0EF91602D4FB004D20E1 /* CandidateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */; };
+		59FC0EFA1602D4FB004D20E1 /* CandidateProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EE11602D4FB004D20E1 /* CandidateProfileViewController.xib */; };
+		59FC0EFB1602D4FB004D20E1 /* candidates.csv in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EE21602D4FB004D20E1 /* candidates.csv */; };
+		59FC0EFC1602D4FB004D20E1 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EE41602D4FB004D20E1 /* DayViewController.m */; };
+		59FC0EFD1602D4FB004D20E1 /* DayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EE51602D4FB004D20E1 /* DayViewController.xib */; };
+		59FC0F001602D4FB004D20E1 /* LineChartDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EEC1602D4FB004D20E1 /* LineChartDataSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59FC0F011602D4FB004D20E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EED1602D4FB004D20E1 /* main.m */; };
+		59FC0F021602D4FB004D20E1 /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EEF1602D4FB004D20E1 /* parseCSV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		59FC0F031602D4FB004D20E1 /* PresidentX-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EF01602D4FB004D20E1 /* PresidentX-Info.plist */; };
+		59FC0F041602D4FB004D20E1 /* resultsTweeterSensitivity.csv in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EF21602D4FB004D20E1 /* resultsTweeterSensitivity.csv */; };
+		59FC0F051602D4FB004D20E1 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */; };
+		59FC0F061602D4FB004D20E1 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */; };
+		59FC0F071602D4FB004D20E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EF71602D4FB004D20E1 /* ViewController.m */; };
+		59FC0F121602D583004D20E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0F101602D583004D20E1 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		47A47ED0160294200079D52C /* PresidentX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresidentX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A47ED4160294200079D52C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47A47ED6160294200079D52C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47A47ED8160294200079D52C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47A47EF1160296230079D52C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47A47EF3160296280079D52C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		47A47F081602A4C10079D52C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		47A47F0A1602A52C0079D52C /* parseCSV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
+		47A47F0B1602A52C0079D52C /* parseCSV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
+		59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
+		59FC0EDD1602D4FB004D20E1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PresidentX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PresidentX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		59FC0EDF1602D4FB004D20E1 /* CandidateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CandidateProfileViewController.h; path = PresidentX/CandidateProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CandidateProfileViewController.m; path = PresidentX/CandidateProfileViewController.m; sourceTree = SOURCE_ROOT; };
+		59FC0EE11602D4FB004D20E1 /* CandidateProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CandidateProfileViewController.xib; path = PresidentX/CandidateProfileViewController.xib; sourceTree = SOURCE_ROOT; };
+		59FC0EE21602D4FB004D20E1 /* candidates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = candidates.csv; path = PresidentX/candidates.csv; sourceTree = SOURCE_ROOT; };
+		59FC0EE31602D4FB004D20E1 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayViewController.h; path = PresidentX/DayViewController.h; sourceTree = SOURCE_ROOT; };
+		59FC0EE41602D4FB004D20E1 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayViewController.m; path = PresidentX/DayViewController.m; sourceTree = SOURCE_ROOT; };
+		59FC0EE51602D4FB004D20E1 /* DayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DayViewController.xib; path = PresidentX/DayViewController.xib; sourceTree = SOURCE_ROOT; };
+		59FC0EEB1602D4FB004D20E1 /* LineChartDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineChartDataSource.h; path = PresidentX/LineChartDataSource.h; sourceTree = SOURCE_ROOT; };
+		59FC0EEC1602D4FB004D20E1 /* LineChartDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineChartDataSource.m; path = PresidentX/LineChartDataSource.m; sourceTree = SOURCE_ROOT; };
+		59FC0EED1602D4FB004D20E1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PresidentX/main.m; sourceTree = SOURCE_ROOT; };
+		59FC0EEE1602D4FB004D20E1 /* parseCSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parseCSV.h; path = PresidentX/parseCSV.h; sourceTree = SOURCE_ROOT; };
+		59FC0EEF1602D4FB004D20E1 /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = parseCSV.m; path = PresidentX/parseCSV.m; sourceTree = SOURCE_ROOT; };
+		59FC0EF01602D4FB004D20E1 /* PresidentX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PresidentX-Info.plist"; path = "PresidentX/PresidentX-Info.plist"; sourceTree = SOURCE_ROOT; };
+		59FC0EF11602D4FB004D20E1 /* PresidentX-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PresidentX-Prefix.pch"; path = "PresidentX/PresidentX-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		59FC0EF21602D4FB004D20E1 /* resultsTweeterSensitivity.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = resultsTweeterSensitivity.csv; path = PresidentX/resultsTweeterSensitivity.csv; sourceTree = SOURCE_ROOT; };
+		59FC0EF31602D4FB004D20E1 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = PresidentX/UserProfileViewController.h; sourceTree = SOURCE_ROOT; };
+		59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = PresidentX/UserProfileViewController.m; sourceTree = SOURCE_ROOT; };
+		59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserProfileViewController.xib; path = PresidentX/UserProfileViewController.xib; sourceTree = SOURCE_ROOT; };
+		59FC0EF61602D4FB004D20E1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = PresidentX/ViewController.h; sourceTree = SOURCE_ROOT; };
+		59FC0EF71602D4FB004D20E1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = PresidentX/ViewController.m; sourceTree = SOURCE_ROOT; };
+		59FC0F111602D583004D20E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = PresidentX/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47A47ECD160294200079D52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC0ED31602D25C004D20E1 /* ShinobiCharts.framework in Frameworks */,
+				47A47F091602A4C10079D52C /* Security.framework in Frameworks */,
+				47A47EF4160296280079D52C /* OpenGLES.framework in Frameworks */,
+				47A47EF2160296230079D52C /* QuartzCore.framework in Frameworks */,
+				47A47ED5160294200079D52C /* UIKit.framework in Frameworks */,
+				47A47ED7160294200079D52C /* Foundation.framework in Frameworks */,
+				47A47ED9160294200079D52C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47A47EC5160294200079D52C = {
+			isa = PBXGroup;
+			children = (
+				47A47EDA160294200079D52C /* PresidentX */,
+				47A47ED3160294200079D52C /* Frameworks */,
+				47A47ED1160294200079D52C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47A47ED1160294200079D52C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47A47ED0160294200079D52C /* PresidentX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47A47ED3160294200079D52C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47A47ED8160294200079D52C /* CoreGraphics.framework */,
+				47A47ED6160294200079D52C /* Foundation.framework */,
+				47A47EF3160296280079D52C /* OpenGLES.framework */,
+				47A47EF1160296230079D52C /* QuartzCore.framework */,
+				47A47F081602A4C10079D52C /* Security.framework */,
+				59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */,
+				47A47ED4160294200079D52C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47A47EDA160294200079D52C /* PresidentX */ = {
+			isa = PBXGroup;
+			children = (
+				59FC0EDD1602D4FB004D20E1 /* AppDelegate.h */,
+				59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */,
+				59FC0EDF1602D4FB004D20E1 /* CandidateProfileViewController.h */,
+				59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */,
+				59FC0EE11602D4FB004D20E1 /* CandidateProfileViewController.xib */,
+				59FC0EE31602D4FB004D20E1 /* DayViewController.h */,
+				59FC0EE41602D4FB004D20E1 /* DayViewController.m */,
+				59FC0EE51602D4FB004D20E1 /* DayViewController.xib */,
+				59FC0EEB1602D4FB004D20E1 /* LineChartDataSource.h */,
+				59FC0EEC1602D4FB004D20E1 /* LineChartDataSource.m */,
+				59FC0EEE1602D4FB004D20E1 /* parseCSV.h */,
+				59FC0EEF1602D4FB004D20E1 /* parseCSV.m */,
+				59FC0EF21602D4FB004D20E1 /* resultsTweeterSensitivity.csv */,
+				59FC0EF31602D4FB004D20E1 /* UserProfileViewController.h */,
+				59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */,
+				59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */,
+				59FC0EF61602D4FB004D20E1 /* ViewController.h */,
+				59FC0EF71602D4FB004D20E1 /* ViewController.m */,
+				47A47F0C1602A5330079D52C /* CSVParser */,
+				47A47EDB160294200079D52C /* Supporting Files */,
+			);
+			name = PresidentX;
+			path = AOLHatch;
+			sourceTree = "<group>";
+		};
+		47A47EDB160294200079D52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59FC0F101602D583004D20E1 /* InfoPlist.strings */,
+				59FC0EF01602D4FB004D20E1 /* PresidentX-Info.plist */,
+				59FC0EED1602D4FB004D20E1 /* main.m */,
+				59FC0EF11602D4FB004D20E1 /* PresidentX-Prefix.pch */,
+				59FC0EE21602D4FB004D20E1 /* candidates.csv */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47A47F0C1602A5330079D52C /* CSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				47A47F0A1602A52C0079D52C /* parseCSV.h */,
+				47A47F0B1602A52C0079D52C /* parseCSV.m */,
+			);
+			name = CSVParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47A47ECF160294200079D52C /* PresidentX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47A47EEE160294200079D52C /* Build configuration list for PBXNativeTarget "PresidentX" */;
+			buildPhases = (
+				47A47ECC160294200079D52C /* Sources */,
+				47A47ECD160294200079D52C /* Frameworks */,
+				47A47ECE160294200079D52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PresidentX;
+			productName = AOLHatch;
+			productReference = 47A47ED0160294200079D52C /* PresidentX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47A47EC7160294200079D52C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "AOL Hatch Day";
+			};
+			buildConfigurationList = 47A47ECA160294200079D52C /* Build configuration list for PBXProject "PresidentX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 47A47EC5160294200079D52C;
+			productRefGroup = 47A47ED1160294200079D52C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47A47ECF160294200079D52C /* PresidentX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47A47ECE160294200079D52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC0EFA1602D4FB004D20E1 /* CandidateProfileViewController.xib in Resources */,
+				59FC0EFB1602D4FB004D20E1 /* candidates.csv in Resources */,
+				59FC0EFD1602D4FB004D20E1 /* DayViewController.xib in Resources */,
+				59FC0F031602D4FB004D20E1 /* PresidentX-Info.plist in Resources */,
+				59FC0F041602D4FB004D20E1 /* resultsTweeterSensitivity.csv in Resources */,
+				59FC0F061602D4FB004D20E1 /* UserProfileViewController.xib in Resources */,
+				59FC0F121602D583004D20E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47A47ECC160294200079D52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59FC0EF81602D4FB004D20E1 /* AppDelegate.m in Sources */,
+				59FC0EF91602D4FB004D20E1 /* CandidateProfileViewController.m in Sources */,
+				59FC0EFC1602D4FB004D20E1 /* DayViewController.m in Sources */,
+				59FC0F001602D4FB004D20E1 /* LineChartDataSource.m in Sources */,
+				59FC0F011602D4FB004D20E1 /* main.m in Sources */,
+				59FC0F021602D4FB004D20E1 /* parseCSV.m in Sources */,
+				59FC0F051602D4FB004D20E1 /* UserProfileViewController.m in Sources */,
+				59FC0F071602D4FB004D20E1 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59FC0F101602D583004D20E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59FC0F111602D583004D20E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47A47EEC160294200079D52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47A47EED160294200079D52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47A47EEF160294200079D52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ShinobiCharts Trial\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PresidentX/PresidentX-Prefix.pch";
+				INFOPLIST_FILE = "PresidentX/PresidentX-Info.plist";
+				PRODUCT_NAME = PresidentX;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47A47EF0160294200079D52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ShinobiCharts Trial\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PresidentX/PresidentX-Prefix.pch";
+				INFOPLIST_FILE = "PresidentX/PresidentX-Info.plist";
+				PRODUCT_NAME = PresidentX;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47A47ECA160294200079D52C /* Build configuration list for PBXProject "PresidentX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A47EEC160294200079D52C /* Debug */,
+				47A47EED160294200079D52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47A47EEE160294200079D52C /* Build configuration list for PBXNativeTarget "PresidentX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A47EEF160294200079D52C /* Debug */,
+				47A47EF0160294200079D52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47A47EC7160294200079D52C /* Project object */;
+}
