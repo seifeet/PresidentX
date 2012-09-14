@@ -31,27 +31,32 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES];
-    
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    closeButton.frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
-    [closeButton setImage:[UIImage imageNamed:@"icon_close.png"] forState:UIControlStateNormal];
-    [closeButton addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:closeButton];
-    
-    // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
-    
-//  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
-  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
-    
-    [self createChartWithFrame:chartFrame];
+  [super viewDidLoad];
+  
+  // Do any additional setup after loading the view from its nib.
+  [self.navigationController setNavigationBarHidden:YES];
+  
+  // Do any additional setup after loading the view from its nib.
+  self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
+  
+  //  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
+  CGRect chartFrame = CGRectMake(0.0, 2.0, self.view.bounds.size.width, self.view.bounds.size.height);
+  
+  [self createChartWithFrame:chartFrame];
+  
+  UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  closeButton.frame = CGRectMake(self.view.bounds.size.width - 37.0, 0.0, 37.0, 37.0);
+  [closeButton setImage:[UIImage imageNamed:@"icon_close.png"] forState:UIControlStateNormal];
+  [closeButton addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:closeButton];
 }
 
--(void)createChartWithFrame:(CGRect)frame
+- (void)viewWillAppear:(BOOL)animated
+{
+  [UIViewController attemptRotationToDeviceOrientation];
+  [super viewWillAppear:animated];
+}
+- (void)createChartWithFrame:(CGRect)frame
 {
     
     ShinobiChart *chart = [[ShinobiChart alloc] initWithFrame:frame withTheme: [[SChartMidnightTheme alloc] init] withPrimaryXAxisType:SChartAxisTypeDateTime withPrimaryYAxisType:SChartAxisTypeNumber];
@@ -114,7 +119,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+  if (interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    return YES;
+  else
+    return NO;
 }
 
 - (void)closeButtonPressed
