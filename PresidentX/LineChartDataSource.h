@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ShinobiCharts/ShinobiChart.h>
+#import "parseCSV.h"
 
 @interface LineChartDataSource : NSObject <SChartDatasource>
 

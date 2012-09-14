@@ -11,4 +11,6 @@
 @interface MultiGraphViewController : UIViewController
 <SChartDelegate>
 
+@property (nonatomic, strong) NSString *candidate;
+
 @end

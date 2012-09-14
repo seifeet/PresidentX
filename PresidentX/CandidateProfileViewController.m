@@ -55,7 +55,7 @@
     self.symbolLabel.text = @"ROM";
   }
   
-   CGRect chartFrame = CGRectMake(10.0, 240.0, 292.0, 190.0);
+   CGRect chartFrame = CGRectMake(20.0, 240.0, 292.0, 190.0);
     
     [self createChartWithFrame:chartFrame];
   
@@ -136,7 +136,7 @@
   // Move the labels of the tickmarks on the yAxis over the plot area
   if (axis == c.yAxis) {
     CGRect tickLabelFrame = tickMark.tickLabel.frame;
-    tickLabelFrame.origin.x += [axis spaceRequiredToDrawWithTitle: NO] + 5.f;
+//    tickLabelFrame.origin.x += [axis spaceRequiredToDrawWithTitle: NO] + 5.f;
     tickMark.tickLabel.frame = tickLabelFrame;
   }
 }
