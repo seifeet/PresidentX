@@ -45,13 +45,13 @@
   if (point.y < 252.0)
   {
     CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
-    candidateVC.candidate = @"romney";
+    candidateVC.candidate = @"obama";
     [self.navigationController pushViewController:candidateVC animated:YES];
   }
   else
   {
     CandidateProfileViewController *candidateVC = [[CandidateProfileViewController alloc] initWithNibName:@"CandidateProfileViewController" bundle:nil];
-    candidateVC.candidate = @"obama";
+    candidateVC.candidate = @"romney";
     [self.navigationController pushViewController:candidateVC animated:YES];
   }
 }

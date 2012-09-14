@@ -13,6 +13,7 @@
 
 @interface CandidateProfileViewController ()
 
+@property (nonatomic, strong) IBOutlet UIImageView *profileImage;
 @property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
 @property (nonatomic, strong) LineChartDataSource *dataSource;
 
@@ -31,13 +32,23 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
   
-    self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
-    
+  self.view.backgroundColor = [UIColor colorWithRed:255.f/255.f green:248.f/255.f blue:228.f/255.f alpha:1.f];
+  if ([self.candidate isEqualToString:@"obama"])
+  {
+    self.profileImage.image = [UIImage imageNamed:@"obama_candidate"];
+  }
+  else{
+    self.profileImage.image = [UIImage imageNamed:@"romney_candidate"];
+
+  }
+  
     //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
     CGRect chartFrame = CGRectMake(0.0, 200.0, 320.0, 260.0);
+  
+  
     
     [self createChartWithFrame:chartFrame];
 }
