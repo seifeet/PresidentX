@@ -41,8 +41,6 @@
 		59FC0F011602D4FB004D20E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EED1602D4FB004D20E1 /* main.m */; };
 		59FC0F021602D4FB004D20E1 /* parseCSV.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EEF1602D4FB004D20E1 /* parseCSV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		59FC0F031602D4FB004D20E1 /* PresidentX-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EF01602D4FB004D20E1 /* PresidentX-Info.plist */; };
-		59FC0F051602D4FB004D20E1 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */; };
-		59FC0F061602D4FB004D20E1 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */; };
 		59FC0F071602D4FB004D20E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EF71602D4FB004D20E1 /* ViewController.m */; };
 		59FC0F121602D583004D20E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59FC0F101602D583004D20E1 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -91,9 +89,6 @@
 		59FC0EEF1602D4FB004D20E1 /* parseCSV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = parseCSV.m; path = PresidentX/parseCSV.m; sourceTree = SOURCE_ROOT; };
 		59FC0EF01602D4FB004D20E1 /* PresidentX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PresidentX-Info.plist"; path = "PresidentX/PresidentX-Info.plist"; sourceTree = SOURCE_ROOT; };
 		59FC0EF11602D4FB004D20E1 /* PresidentX-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PresidentX-Prefix.pch"; path = "PresidentX/PresidentX-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		59FC0EF31602D4FB004D20E1 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = PresidentX/UserProfileViewController.h; sourceTree = SOURCE_ROOT; };
-		59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = PresidentX/UserProfileViewController.m; sourceTree = SOURCE_ROOT; };
-		59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserProfileViewController.xib; path = PresidentX/UserProfileViewController.xib; sourceTree = SOURCE_ROOT; };
 		59FC0EF61602D4FB004D20E1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = PresidentX/ViewController.h; sourceTree = SOURCE_ROOT; };
 		59FC0EF71602D4FB004D20E1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = PresidentX/ViewController.m; sourceTree = SOURCE_ROOT; };
 		59FC0F111602D583004D20E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = PresidentX/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -164,9 +159,6 @@
 				47A47F571602E2B30079D52C /* MultiGraphViewController.h */,
 				47A47F581602E2B30079D52C /* MultiGraphViewController.m */,
 				47A47F591602E2B30079D52C /* MultiGraphViewController.xib */,
-				59FC0EF31602D4FB004D20E1 /* UserProfileViewController.h */,
-				59FC0EF41602D4FB004D20E1 /* UserProfileViewController.m */,
-				59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */,
 				59FC0EF61602D4FB004D20E1 /* ViewController.h */,
 				59FC0EF71602D4FB004D20E1 /* ViewController.m */,
 				47A47F481602DD200079D52C /* ViewController.xib */,
@@ -285,7 +277,6 @@
 				59FC0EFA1602D4FB004D20E1 /* CandidateProfileViewController.xib in Resources */,
 				59FC0EFD1602D4FB004D20E1 /* DayViewController.xib in Resources */,
 				59FC0F031602D4FB004D20E1 /* PresidentX-Info.plist in Resources */,
-				59FC0F061602D4FB004D20E1 /* UserProfileViewController.xib in Resources */,
 				59FC0F121602D583004D20E1 /* InfoPlist.strings in Resources */,
 				47A47F4A1602DD200079D52C /* ViewController.xib in Resources */,
 				47A47F511602DDD90079D52C /* candidates.csv in Resources */,
@@ -320,7 +311,6 @@
 				59FC0F001602D4FB004D20E1 /* LineChartDataSource.m in Sources */,
 				59FC0F011602D4FB004D20E1 /* main.m in Sources */,
 				59FC0F021602D4FB004D20E1 /* parseCSV.m in Sources */,
-				59FC0F051602D4FB004D20E1 /* UserProfileViewController.m in Sources */,
 				59FC0F071602D4FB004D20E1 /* ViewController.m in Sources */,
 				47A47F5A1602E2B40079D52C /* MultiGraphViewController.m in Sources */,
 			);

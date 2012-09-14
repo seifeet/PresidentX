@@ -14,6 +14,9 @@
 @interface CandidateProfileViewController ()
 
 @property (nonatomic, strong) IBOutlet UIImageView *profileImage;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *priceLabel;
+@property (nonatomic, strong) IBOutlet UILabel *symbolLabel;
 @property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
 @property (nonatomic, strong) LineChartDataSource *dataSource;
 
@@ -36,21 +39,32 @@
   // Do any additional setup after loading the view from its nib.
   
   self.view.backgroundColor = [UIColor colorWithRed:255.f/255.f green:248.f/255.f blue:228.f/255.f alpha:1.f];
+  
   if ([self.candidate isEqualToString:@"obama"])
   {
     self.profileImage.image = [UIImage imageNamed:@"obama_candidate"];
+    self.titleLabel.text = @"Obama Shares";
+    self.priceLabel.text = @"58.25";
+    self.symbolLabel.text = @"OBM";
   }
-  else{
+  else
+  {
     self.profileImage.image = [UIImage imageNamed:@"romney_candidate"];
-
+    self.titleLabel.text = @"Romney Shares";
+    self.priceLabel.text = @"46.75";
+    self.symbolLabel.text = @"ROM";
   }
   
     //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
-    CGRect chartFrame = CGRectMake(0.0, 200.0, 320.0, 260.0);
-  
-  
+    CGRect chartFrame = CGRectMake(14.0, 240.0, 292.0, 190.0);
     
     [self createChartWithFrame:chartFrame];
+  
+  UIButton *fullScreenButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  fullScreenButton.frame = CGRectMake(277.0, 240.0, 27.0, 27.0);
+  [fullScreenButton setImage:[UIImage imageNamed:@"fullScreen.png"] forState:UIControlStateNormal];
+  [fullScreenButton addTarget:self action:@selector(fullScreenPressed) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:fullScreenButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -126,13 +140,11 @@
   }
 }
 
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-  
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -140,7 +152,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)fullScreenGraph:(id)sender
+- (void)fullScreenPressed
 {
   MultiGraphViewController *multiGraph = [[MultiGraphViewController alloc] initWithNibName:@"MultiGraphViewController" bundle:nil];
   [self.navigationController pushViewController:multiGraph animated:YES];
