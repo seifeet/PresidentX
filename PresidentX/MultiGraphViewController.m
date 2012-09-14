@@ -63,8 +63,9 @@
     //As the chart is a UIView, set its resizing mask to allow it to automatically resize when screen orientation changes.
     chart.autoresizingMask = ~UIViewAutoresizingNone;
     
-    // Initialise a datasource and give it to the chart
-    self.dataSource = [[TwitterTopicsDataSource alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:self.candidate == @"obama" ? @"obama_twitter" : @"romney_twitter" ofType:@"csv"];
+    
+    self.dataSource = [[TwitterTopicsDataSource alloc] initWithPath:path];
     chart.datasource = self.dataSource;
     
     // Set this object as the delegate for the chart

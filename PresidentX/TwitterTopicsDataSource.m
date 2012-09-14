@@ -40,7 +40,7 @@
       if (dateStr && priceStr)
       {
         NSDate *date = [dateFormatter dateFromString: priceStr];
-        NSNumber *priceCount = @([priceStr intValue]);
+        NSNumber *priceCount = @(floor([priceStr doubleValue]));
         
         if (date && priceCount)
         {
@@ -51,7 +51,7 @@
       if (dateStr && overallStr)
       {
         NSDate *date = [dateFormatter dateFromString: dateStr];
-        NSNumber *overallCount = @([overallStr intValue]);
+        NSNumber *overallCount = @([overallStr intValue] / 100);
         
         if (date && overallCount)
         {
@@ -122,71 +122,90 @@
 - (int)sChart:(ShinobiChart *)chart numberOfDataPointsForSeriesAtIndex:(int)seriesIndex {
   
   // In our example, all series have the same number of points
-  return [self.series1Data count];
+    switch (seriesIndex)
+    {
+        case 0:
+            return [self.series0Data count];
+            break;
+        case 1:
+            return [self.series1Data count];
+            break;
+        case 2:
+            return [self.series2Data count];
+            break;
+        case 3:
+            return [self.series3Data count];
+            break;
+        case 4:
+            return [self.series4Data count];
+            break;
+        default:
+            break;
+    }
+    return 0;
 }
 
 // Returns the series at the specified index for a given chart
 -(SChartSeries *)sChart:(ShinobiChart *)chart seriesAtIndex:(int)index
 {
-  
-  BOOL stepLineMode = NO;
-  // Our series are either of type SChartLineSeries or SChartStepLineSeries depending on stepLineMode.
-  SChartLineSeries *lineSeries = stepLineMode? [[SChartStepLineSeries alloc] init]: [[SChartLineSeries alloc] init];
-  
-  lineSeries.style.lineWidth = [NSNumber numberWithInt: 2];
-
-  switch (index) {
-    case 0:
-      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-      
-      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
-      break;
-      
-    case 1:
-      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-      
-      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
-      break;
+    BOOL stepLineMode = NO;
+    // Our series are either of type SChartLineSeries or SChartStepLineSeries depending on stepLineMode.
+    SChartLineSeries *lineSeries = stepLineMode? [[SChartStepLineSeries alloc] init]: [[SChartLineSeries alloc] init];
     
-    case 2:
-      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-      
-      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
-      break;
-
-    case 3:
-      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-      
-      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
-      break;
+    lineSeries.style.lineWidth = [NSNumber numberWithInt: 2];
     
-    case 4:
-      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-      
-      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
-      break;
+    switch (index) {
+        case 0:
+            lineSeries.style.lineColor = [UIColor colorWithRed:255.f/215.f green:0.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:238.f/255.f green:211.f/255.f blue:130.f/255.f alpha:1.f];
+            
+            lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+            break;
+            
+        case 1:
+            lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+            
+            lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+            break;
+            
+        case 2:
+            lineSeries.style.lineColor = [UIColor colorWithRed:255.f/215.f green:0.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:238.f/255.f green:211.f/255.f blue:130.f/255.f alpha:1.f];
+            
+            lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+            break;
+            
+        case 3:
+            lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+            
+            lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+            break;
+            
+        case 4:
+            lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+            
+            lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+            break;
+            
+        default:
+            break;
+    }
     
-    default:
-      break;
-  }
-  
-  
-  lineSeries.baseline = [NSNumber numberWithInt:0];
-  lineSeries.style.showFill = YES;
-  
-  lineSeries.crosshairEnabled = YES;
-  
-  return lineSeries;
+    
+    lineSeries.baseline = [NSNumber numberWithInt:0];
+    lineSeries.style.showFill = YES;
+    
+    lineSeries.crosshairEnabled = YES;
+    
+    return lineSeries;
 }
 
 // Returns the number of series in the specified chart
