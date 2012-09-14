@@ -31,6 +31,7 @@
 		47A47F6E1602F98F0079D52C /* obama_candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F681602F98F0079D52C /* obama_candidate.png */; };
 		47A47F6F1602F98F0079D52C /* romney_candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F691602F98F0079D52C /* romney_candidate.png */; };
 		47A47F701602F98F0079D52C /* sellShares.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F6A1602F98F0079D52C /* sellShares.png */; };
+		47A47F7216031E490079D52C /* romney_intrade_edited.csv in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F7116031E490079D52C /* romney_intrade_edited.csv */; };
 		59FC0ED31602D25C004D20E1 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */; };
 		59FC0EF81602D4FB004D20E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */; };
 		59FC0EF91602D4FB004D20E1 /* CandidateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */; };
@@ -72,6 +73,7 @@
 		47A47F681602F98F0079D52C /* obama_candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama_candidate.png; sourceTree = "<group>"; };
 		47A47F691602F98F0079D52C /* romney_candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = romney_candidate.png; sourceTree = "<group>"; };
 		47A47F6A1602F98F0079D52C /* sellShares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sellShares.png; sourceTree = "<group>"; };
+		47A47F7116031E490079D52C /* romney_intrade_edited.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = romney_intrade_edited.csv; sourceTree = "<group>"; };
 		59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		59FC0EDD1602D4FB004D20E1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PresidentX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PresidentX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -195,6 +197,7 @@
 		47A47F4C1602DDD90079D52C /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				47A47F7116031E490079D52C /* romney_intrade_edited.csv */,
 				47A47F551602E09C0079D52C /* obama_intrade_edited.csv */,
 				47A47F4D1602DDD90079D52C /* candidates.csv */,
 				47A47F4E1602DDD90079D52C /* obama_intrade.csv */,
@@ -295,6 +298,7 @@
 				47A47F6E1602F98F0079D52C /* obama_candidate.png in Resources */,
 				47A47F6F1602F98F0079D52C /* romney_candidate.png in Resources */,
 				47A47F701602F98F0079D52C /* sellShares.png in Resources */,
+				47A47F7216031E490079D52C /* romney_intrade_edited.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,8 +55,7 @@
     self.symbolLabel.text = @"ROM";
   }
   
-    //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
-    CGRect chartFrame = CGRectMake(14.0, 240.0, 292.0, 190.0);
+   CGRect chartFrame = CGRectMake(10.0, 240.0, 292.0, 190.0);
     
     [self createChartWithFrame:chartFrame];
   
@@ -81,14 +80,16 @@
   chart.autoresizingMask = ~UIViewAutoresizingNone;
   
   // Initialise a datasource and give it to the chart
-  self.dataSource = [[LineChartDataSource alloc] init];
+  NSString *path = [[NSBundle mainBundle] pathForResource:self.candidate == @"obama" ? @"obama_intrade_edited" : @"romney_intrade_edited" ofType:@"csv"];
+
+  self.dataSource = [[LineChartDataSource alloc] initWithPath:path];
   chart.datasource = self.dataSource;
   
   // Set this object as the delegate for the chart
   chart.delegate = self;
   
   // Chart Title
-//  chart.title = @"Large Data Set - 20,000 Points";
+  chart.title = self.candidate == @"obama" ? @"OBM" : @"ROM";
   chart.titleLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:17.0f];
   chart.titleLabel.textColor = [UIColor whiteColor];
   

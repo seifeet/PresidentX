@@ -10,24 +10,24 @@
 
 @interface LineChartDataSource ()
 
-@property (nonatomic, retain) NSMutableArray *series1Data, *series1Dates;
+@property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
+@property (nonatomic, strong) NSString *path;
 
 @end
 
 @implementation LineChartDataSource
 
 - (void)readCandidateData
-{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"candidates" ofType:@"csv"];
-    
+{    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
     
     CSVParser *parser = [CSVParser new];
-    [parser openFile: path];
+    [parser openFile:self.path];
     NSMutableArray *csvContent = [parser parseFile];
-    int lineNumber;
-    for (lineNumber = 1; lineNumber < [csvContent count]; ++lineNumber) {
+    NSInteger lineNumber;
+    for (lineNumber = 1; lineNumber < [csvContent count]; ++lineNumber)
+    {
         NSArray *line = [csvContent objectAtIndex: lineNumber];
         if (line) {
             NSString *dateStr = [line objectAtIndex:0];
@@ -49,15 +49,16 @@
     [parser closeFile];
 }
 
-- (id)init
+- (id)initWithPath:(NSString *)path
 {
     self = [super init];
     if (self)
     {
-        _series1Data = [[NSMutableArray alloc] init];
-        _series1Dates = [[NSMutableArray alloc] init];
-        
-        [self readCandidateData];
+      _path = path;
+      _series1Data = [[NSMutableArray alloc] init];
+      _series1Dates = [[NSMutableArray alloc] init];
+      
+      [self readCandidateData];
     }
     return self;
 }
@@ -112,7 +113,7 @@
     
     // Construct an NSNumber for the yValue of the data point
 
-    datapoint.yValue = [NSNumber numberWithFloat:[[self.series1Data objectAtIndex:dataIndex] floatValue] - 10000.f];
+  datapoint.yValue = @([[self.series1Data objectAtIndex:dataIndex] floatValue]);
     
     return datapoint;
 }

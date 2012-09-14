@@ -10,4 +10,6 @@
 
 @interface LineChartDataSource : NSObject <SChartDatasource>
 
+- (id)initWithPath:(NSString *)path;
+
 @end
