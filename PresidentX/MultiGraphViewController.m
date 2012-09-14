@@ -8,13 +8,13 @@
 
 #import <ShinobiCharts/ShinobiChart.h>
 #import "MultiGraphViewController.h"
-#import "LineChartDataSource.h"
+#import "TwitterTopicsDataSource.h"
 #import "parseCSV.h"
 
 @interface MultiGraphViewController ()
 
 @property (nonatomic, strong) NSMutableArray *series1Data, *series1Dates;
-@property (nonatomic, strong) LineChartDataSource *dataSource;
+@property (nonatomic, strong) TwitterTopicsDataSource *dataSource;
 
 @end
 
@@ -45,7 +45,8 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
     
-    CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
+//  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
+  CGRect chartFrame = CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height-20);
     
     [self createChartWithFrame:chartFrame];
 }
@@ -58,7 +59,7 @@
     chart.autoresizingMask = ~UIViewAutoresizingNone;
     
     // Initialise a datasource and give it to the chart
-    self.dataSource = [[LineChartDataSource alloc] init];
+    self.dataSource = [[TwitterTopicsDataSource alloc] init];
     chart.datasource = self.dataSource;
     
     // Set this object as the delegate for the chart
@@ -96,12 +97,12 @@
 // Alter tickmarks before they're added to the axes
 -(void)sChart:(ShinobiChart *)c alterTickMark:(SChartTickMark *)tickMark beforeAddingToAxis:(SChartAxis *)axis {
     
-    // Move the labels of the tickmarks on the yAxis over the plot area
-    if (axis == c.yAxis) {
-        CGRect tickLabelFrame = tickMark.tickLabel.frame;
-        tickLabelFrame.origin.x += [axis spaceRequiredToDrawWithTitle: NO] + 5.f;
-        tickMark.tickLabel.frame = tickLabelFrame;
-    }
+//    // Move the labels of the tickmarks on the yAxis over the plot area
+//    if (axis == c.yAxis) {
+//        CGRect tickLabelFrame = tickMark.tickLabel.frame;
+//        tickLabelFrame.origin.x += [axis spaceRequiredToDrawWithTitle: NO] + 5.f;
+//        tickMark.tickLabel.frame = tickLabelFrame;
+//    }
 }
 
 - (void)viewDidUnload

@@ -10,7 +10,7 @@
 
 @interface TwitterTopicsDataSource ()
 
-@property (nonatomic, strong) NSMutableArray *seriesDates, *series1Data, *series2Data, *series3Data, *series4Data;
+@property (nonatomic, strong) NSMutableArray *seriesDates, *series1Data, *series2Data, *series3Data, *series4Data, *series0Data;
 @property (nonatomic, strong) NSString *path;
 
 @end
@@ -31,17 +31,65 @@
     NSArray *line = [csvContent objectAtIndex: lineNumber];
     if (line) {
       NSString *dateStr = [line objectAtIndex:0];
-      NSString *obamaStr = [line objectAtIndex:1];
+      NSString *priceStr = [line objectAtIndex:1];
+      NSString *overallStr = [line objectAtIndex:2];
+      NSString *abortionStr = [line objectAtIndex:3];
+      NSString *economyStr = [line objectAtIndex:4];
+      NSString *healthcareStr = [line objectAtIndex:5];
       
-      if (dateStr && obamaStr)
+      if (dateStr && priceStr)
       {
-        NSDate *date = [dateFormatter dateFromString: dateStr];
-        NSNumber *obamaCount = [NSNumber numberWithInt:[obamaStr intValue]];
+        NSDate *date = [dateFormatter dateFromString: priceStr];
+        NSNumber *priceCount = @([priceStr intValue]);
         
-        if (date && obamaCount)
+        if (date && priceCount)
         {
           [self.seriesDates addObject:date];
-          [self.series1Data addObject:obamaCount];
+          [self.series0Data addObject:priceCount];
+        }
+      }
+      if (dateStr && overallStr)
+      {
+        NSDate *date = [dateFormatter dateFromString: dateStr];
+        NSNumber *overallCount = @([overallStr intValue]);
+        
+        if (date && overallCount)
+        {
+          [self.seriesDates addObject:date];
+          [self.series1Data addObject:overallCount];
+        }
+      }
+      if (dateStr && abortionStr)
+      {
+        NSDate *date = [dateFormatter dateFromString: dateStr];
+        NSNumber *abortionCount = @([abortionStr intValue]);
+        
+        if (date && abortionCount)
+        {
+          [self.seriesDates addObject:date];
+          [self.series2Data addObject:abortionCount];
+        }
+      }
+      if (dateStr && economyStr)
+      {
+        NSDate *date = [dateFormatter dateFromString: dateStr];
+        NSNumber *economyCount = @([economyStr intValue]);
+        
+        if (date && economyCount)
+        {
+          [self.seriesDates addObject:date];
+          [self.series3Data addObject:economyCount];
+        }
+      }
+      if (dateStr && healthcareStr)
+      {
+        NSDate *date = [dateFormatter dateFromString: dateStr];
+        NSNumber *healthcareCount = @([healthcareStr intValue]);
+        
+        if (date && healthcareCount)
+        {
+          [self.seriesDates addObject:date];
+          [self.series4Data addObject:healthcareCount];
         }
       }
     }
@@ -56,6 +104,7 @@
   {
     _path = path;
     _seriesDates = [[NSMutableArray alloc] init];
+    _series0Data = [[NSMutableArray alloc] init];
     _series1Data = [[NSMutableArray alloc] init];
     _series2Data = [[NSMutableArray alloc] init];
     _series3Data = [[NSMutableArray alloc] init];
@@ -85,12 +134,52 @@
   SChartLineSeries *lineSeries = stepLineMode? [[SChartStepLineSeries alloc] init]: [[SChartLineSeries alloc] init];
   
   lineSeries.style.lineWidth = [NSNumber numberWithInt: 2];
+
+  switch (index) {
+    case 0:
+      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+      
+      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+      break;
+      
+    case 1:
+      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+      
+      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+      break;
+    
+    case 2:
+      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+      
+      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+      break;
+
+    case 3:
+      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+      
+      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+      break;
+    
+    case 4:
+      lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+      
+      lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
+      lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
+      break;
+    
+    default:
+      break;
+  }
   
-  lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-  lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
-  
-  lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
-  lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
   
   lineSeries.baseline = [NSNumber numberWithInt:0];
   lineSeries.style.showFill = YES;
@@ -102,7 +191,7 @@
 
 // Returns the number of series in the specified chart
 - (int)numberOfSeriesInSChart:(ShinobiChart *)chart {
-  return 1;
+  return 5;
 }
 
 // Returns the data point at the specified index for the given series/chart.
@@ -115,8 +204,26 @@
   datapoint.xValue = [self.seriesDates objectAtIndex:dataIndex];
   
   // Construct an NSNumber for the yValue of the data point
-  
-  datapoint.yValue = @([[self.series1Data objectAtIndex:dataIndex] floatValue]);
+  switch (seriesIndex)
+  {
+    case 0:
+      datapoint.yValue = @([[self.series0Data objectAtIndex:dataIndex] floatValue]);
+      break;
+    case 1:
+      datapoint.yValue = @([[self.series1Data objectAtIndex:dataIndex] floatValue]);
+      break;
+    case 2:
+      datapoint.yValue = @([[self.series2Data objectAtIndex:dataIndex] floatValue]);
+      break;
+    case 3:
+      datapoint.yValue = @([[self.series3Data objectAtIndex:dataIndex] floatValue]);
+      break;
+    case 4:
+      datapoint.yValue = @([[self.series4Data objectAtIndex:dataIndex] floatValue]);
+      break;
+    default:
+      break;
+  }
   
   return datapoint;
 }
