@@ -33,7 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
   self.view.backgroundColor = [UIColor colorWithRed:26.f/255.f green:25.f/255.f blue:25.f/255.f alpha:1.f];
-  
+
   //  CGRect chartFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-50);
   CGRect chartFrame = CGRectMake(0.0, 200.0, 320.0, 260.0);
   
