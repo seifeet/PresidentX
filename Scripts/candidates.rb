@@ -5,7 +5,7 @@ require 'parallel'
 require 'open-uri'
 
 class ApiCall
-    @@apiKey       = '132c9d1b0fd3687a4a7bdd42a7ca596cddd94ca0'
+    @@apiKey = '132c9d1b0fd3687a4a7bdd42a7ca596cddd94ca0'
 
     def initialize(host, path)
         @apiURI       = URI.parse(host)
@@ -62,6 +62,9 @@ def getFeed(host, daysAgo)
    time = Time.now - (24*60*60) * daysAgo
   
    timeStr = time.strftime('"%b %d, %Y"')
+   
+   #puts timeStr
+   #return
 
    obamaTweetCount = TweetCount.new(host, 'obama', daysAgo)
    obamaCount = obamaTweetCount.send
@@ -103,7 +106,7 @@ end
 
 
 #puts "Date, Obama, ObamaCare, ObamaAbortion, ObamaEconomy, ObamaHealthcare, Romney, RomneyAbortion, RomneyEconomy, RomneyHealthcare"
-for i in 71..300
+for i in 361..400
   getFeed("http://otter.topsy.com", i)
 end
 
