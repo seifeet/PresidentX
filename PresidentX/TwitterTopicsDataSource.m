@@ -39,8 +39,8 @@
       
       if (dateStr && priceStr)
       {
-        NSDate *date = [dateFormatter dateFromString: priceStr];
-        NSNumber *priceCount = @(floor([priceStr doubleValue]));
+        NSDate *date = [dateFormatter dateFromString: dateStr];
+        NSNumber *priceCount = @(floor([priceStr doubleValue])*30);
         
         if (date && priceCount)
         {
@@ -156,24 +156,24 @@
     
     switch (index) {
         case 0:
-            lineSeries.style.lineColor = [UIColor colorWithRed:255.f/215.f green:0.f/255.f blue:0.f alpha:1.f];
-            lineSeries.style.areaColor = [UIColor colorWithRed:238.f/255.f green:211.f/255.f blue:130.f/255.f alpha:1.f];
+            lineSeries.style.lineColor = [UIColor colorWithRed:205.f/255.f green:133.f/255.f blue:63.f/255.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:222.f/255.f green:184.f/255.f blue:135.f/255.f alpha:1.f];
             
             lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
             lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
             break;
             
         case 1:
-            lineSeries.style.lineColor = [UIColor colorWithRed:80.f/255.f green:151.f/255.f blue:0.f alpha:1.f];
-            lineSeries.style.areaColor = [UIColor colorWithRed:90.f/255.f green:131.f/255.f blue:10.f/255.f alpha:1.f];
+            lineSeries.style.lineColor = [UIColor colorWithRed:255.f/255.f green:215.f/255.f blue:0.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:238.f/255.f green:221.f/255.f blue:130.f/255.f alpha:1.f];
             
             lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
             lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
             break;
             
         case 2:
-            lineSeries.style.lineColor = [UIColor colorWithRed:255.f/215.f green:0.f/255.f blue:0.f alpha:1.f];
-            lineSeries.style.areaColor = [UIColor colorWithRed:238.f/255.f green:211.f/255.f blue:130.f/255.f alpha:1.f];
+            lineSeries.style.lineColor = [UIColor colorWithRed:205.f/255.f green:133.f/255.f blue:63.f/255.f alpha:1.f];
+            lineSeries.style.areaColor = [UIColor colorWithRed:222.f/255.f green:184.f/255.f blue:135.f/255.f alpha:1.f];
             
             lineSeries.style.lineColorBelowBaseline = [UIColor colorWithRed:227.f/255.f green:182.f/255.f blue:0.f alpha:1.f];
             lineSeries.style.areaColorBelowBaseline = [UIColor colorWithRed:150.f/255.f green:120.f/255.f blue:0.f alpha:1.f];
