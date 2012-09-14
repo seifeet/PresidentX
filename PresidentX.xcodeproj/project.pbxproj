@@ -13,6 +13,7 @@
 		47A47EF2160296230079D52C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47EF1160296230079D52C /* QuartzCore.framework */; };
 		47A47EF4160296280079D52C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47EF3160296280079D52C /* OpenGLES.framework */; };
 		47A47F091602A4C10079D52C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A47F081602A4C10079D52C /* Security.framework */; };
+		47A47F4A1602DD200079D52C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A47F481602DD200079D52C /* ViewController.xib */; };
 		59FC0ED31602D25C004D20E1 /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */; };
 		59FC0EF81602D4FB004D20E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */; };
 		59FC0EF91602D4FB004D20E1 /* CandidateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59FC0EE01602D4FB004D20E1 /* CandidateProfileViewController.m */; };
@@ -41,6 +42,7 @@
 		47A47F081602A4C10079D52C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		47A47F0A1602A52C0079D52C /* parseCSV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parseCSV.h; sourceTree = "<group>"; };
 		47A47F0B1602A52C0079D52C /* parseCSV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = parseCSV.m; sourceTree = "<group>"; };
+		47A47F491602DD200079D52C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = PresidentX/en.lproj/ViewController.xib; sourceTree = SOURCE_ROOT; };
 		59FC0ED21602D25C004D20E1 /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		59FC0EDD1602D4FB004D20E1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PresidentX/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		59FC0EDE1602D4FB004D20E1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PresidentX/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -137,6 +139,7 @@
 				59FC0EF51602D4FB004D20E1 /* UserProfileViewController.xib */,
 				59FC0EF61602D4FB004D20E1 /* ViewController.h */,
 				59FC0EF71602D4FB004D20E1 /* ViewController.m */,
+				47A47F481602DD200079D52C /* ViewController.xib */,
 				47A47F0C1602A5330079D52C /* CSVParser */,
 				47A47EDB160294200079D52C /* Supporting Files */,
 			);
@@ -223,6 +226,7 @@
 				59FC0F041602D4FB004D20E1 /* resultsTweeterSensitivity.csv in Resources */,
 				59FC0F061602D4FB004D20E1 /* UserProfileViewController.xib in Resources */,
 				59FC0F121602D583004D20E1 /* InfoPlist.strings in Resources */,
+				47A47F4A1602DD200079D52C /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +251,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		47A47F481602DD200079D52C /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47A47F491602DD200079D52C /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
 		59FC0F101602D583004D20E1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
